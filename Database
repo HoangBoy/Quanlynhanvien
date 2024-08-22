@@ -1,0 +1,21 @@
+-- Tạo cơ sở dữ liệu
+CREATE DATABASE IF NOT EXISTS NhanVienDB;
+USE NhanVienDB;
+
+-- Tạo bảng NhanVien
+CREATE TABLE IF NOT EXISTS NhanVien (
+    MaNV VARCHAR(10) PRIMARY KEY,
+    Ho VARCHAR(50),
+    Ten VARCHAR(50),
+    GioiTinh VARCHAR(10),
+    NgaySinh DATE,
+    DiaChi VARCHAR(255)
+);
+
+-- Tạo bảng user
+CREATE TABLE IF NOT EXISTS user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100),
+    password VARCHAR(64) NOT NULL
+);
